@@ -19,14 +19,22 @@ Use console.log() to clearly show the before-and-after type conversions.
 */
 
 
-let result = "5" - 2;
+let result = Number("5") - 2;
 console.log("The result is: " + result);
-
-let isValid = Boolean("false");
+// here in the above code there is nothing wrong and you can do that but I think its better to be explicit anyway 
+let isValid = ("true" === "true"); 
+// i dont think you need the boolean here. The three === means you want false 
 if (isValid) {
-    console.log("This is valid!");
-}
+console.log("This is valid!");
+} // I think its better if the machine returns a result so I changed from false to true but since === means we want false it made the satement true 
 
-let age = "25";
-let totalAge = age + 5;
+let age =Number("25"); // age was upercase so i made it lower 
+let totalAge =Number(age) + 5; // i added number just to be safe becasue we have the + sign. 
 console.log("Total Age: " + totalAge);
+
+let implicitassignment ="100" * 5
+console.log("100" * 5);
+
+let input = null; // that way input will = 0
+let result = Number(input); // this turns or converts null to a number itself 
+console.log(result); // 0 i hope ! 
